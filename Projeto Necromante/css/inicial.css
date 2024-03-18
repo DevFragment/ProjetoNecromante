@@ -30,84 +30,45 @@ header {
     font-family: 'Play', sans-serif;
 
 }
-     
+
 * {
-	padding: 0;
-	box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
 }
 
-
-button, button:before {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-button {
-	width: 110px;
-	height: 40px;
-	cursor: pointer;
-	font-family: 'Play', sans-serif;
-	font-size: 20px;
-	color: white;
-	border: none;
-	border-radius: 25px;
-	background-image: url("https://assets.codepen.io/3305358/hazard-stripes-wallpaper.jpg");
-	background-size: 150%;
-	background-position: left;
-	transition: 1s;
-}
-
-button:before {
-	width: 150px;
-	height: 50px;
-	content: 'Baralho';
-	background: rgba(0,0,0,0.6);
-	border-radius: 25px;
-	position: absolute;
-	transition: 500ms;
-}
-
-button:hover:before {
-	background: rgba(0,0,0,0);
-	text-shadow: 1px 1px 1px black;
-}
-
-button:hover {
-	background-position: center;
-	box-shadow: 0px 0px 10px rgba(232, 218, 26, 0.5);
-}
-
-button:focus {
-	outline: none;
-}
-
-.botãobaralho,
-.botãocreditos {
+button, .botãobaralho, .botãocreditos {
     display: inline-block;
     color: white;
     text-decoration: none;
-    padding: 10px 40px;
-    margin-right: 10px; /* Adiciona margem à direita para separar os botões */
+    padding: 10px 20px; /* Ajusta o padding dos botões */
+    margin-right: 10px;
     border-radius: 30px;
     font-family: 'Play', sans-serif;
-
+    background-color: transparent;
+    border: 1px solid white; /* Adiciona uma borda branca */
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
-
-.botãobaralho:hover,
-.botãocreditos:hover {
+button:hover, .botãobaralho:hover, .botãocreditos:hover {
     background-color: #0056b3;
 }
 
 /* Estilo para o contêiner dos botões */
-.botoes-container {
+.botoes-superiores {
     display: flex; /* Exibe os botões lado a lado */
     align-items: center; /* Alinha os botões verticalmente */
-    height: 80px;
 }
 
-/* Estilos para os botões */
-.noselect {
-    margin-right: 30px; /* Adiciona margem à direita para separar os botões */
+/* Estilos para os botões à esquerda */
+.botao-esquerda {
+    margin-right: auto; /* Move os botões à esquerda para a esquerda */
+}
+
+/* Estilos para os botões à direita */
+.botao-direita {
+    margin-left: auto; /* Move os botões à direita para a direita */
 }
